@@ -25,7 +25,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
+        withDockerRegistry(credentialsId: 'docker-hub-credential', url:'') {
           sh 'docker push dockersamples/result'
         }
       }
@@ -35,7 +35,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
+        withDockerRegistry(credentialsId: 'docker-hub-credential', url:'') {
           sh 'docker push dockersamples/vote'
         }
       }
@@ -45,7 +45,7 @@ pipeline {
         branch 'master'
       }
       steps {
-        withDockerRegistry(credentialsId: 'dockerbuildbot-index.docker.io', url:'') {
+        withDockerRegistry(credentialsId: 'docker-hub-credential', url:'') {
           sh 'docker push dockersamples/worker'
         }
       }
