@@ -26,7 +26,7 @@ pipeline {
       }
       steps {
         withDockerRegistry(credentialsId: 'docker-hub-credential', url:'https://index.docker.io/v1/') {
-          sh 'docker push dockersamples/result'
+          sh 'docker push hayoade1/nextgeniam'
         }
       }
     }
@@ -36,7 +36,7 @@ pipeline {
       }
       steps {
         withDockerRegistry(credentialsId: 'docker-hub-credential', url:'https://index.docker.io/v1/') {
-          sh 'docker push dockersamples/vote'
+          sh 'docker push hayoade1/nextgeniam'
         }
       }
     }
@@ -46,7 +46,7 @@ pipeline {
       }
       steps {
         withDockerRegistry(credentialsId: 'docker-hub-credential', url:'https://index.docker.io/v1/') {
-          sh 'docker push dockersamples/worker'
+          sh 'docker push hayoade1/nextgeniam'
         }
       }
     }
